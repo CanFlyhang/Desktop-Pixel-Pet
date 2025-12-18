@@ -112,18 +112,10 @@ README.md
 ```
 ## 👥 项目贡献者
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/yourname">
-        <img src="[https://avatars.githubusercontent.com/yourname](https://github.com/CanFlyhang/)" width="80" /><br />
-        <sub><b>yourname</b></sub>
-      </a>
-    </td>
-    <td align="center">
-    </td>
-  </tr>
-</table>
+感谢所有为本项目贡献过代码的小伙伴 ❤️
+
+[![Contributors](https://contrib.rocks/image?repo=CanFlyhang/desktop-pixel-pet)](https://github.com/CanFlyhang/desktop-pixel-pet/graphs/contributors)
+
 
 ## 常见问题
 - 无法创建悬浮透明窗：确保已安装 `pywin32`；若缺失将自动降级为 Tkinter 顶层窗体。
