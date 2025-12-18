@@ -1,0 +1,46 @@
+{
+  "xuzhihang": {
+    "password": "e454928b85b93aa3b69adff6de843e7f2e32590e8df3ddb9d179c19925520a72",
+    "security_question": "你的生日？",
+    "security_answer": "060822",
+    "unlocked_pets": [
+      "像素小狗",
+      "像素小猫",
+      "像素兔子",
+      "黄金像素龙",
+      "复古机器人",
+      "星河小龙",
+      "樱桃小兔"
+    ],
+    "total_run_time": 3109,
+    "pet_run_time": {
+      "像素小狗": 4423,
+      "像素小猫": 4895,
+      "像素兔子": 2900,
+      "黄金像素龙": 1690,
+      "复古机器人": 4,
+      "星河小龙": 5,
+      "樱桃小兔": 43
+    },
+    "settings": {
+      "warm_greetings": false
+    },
+    "inventory": {},
+    "username": "xuzhihang"
+  },
+  "19873614680": {
+    "password": "9a88d9c2c9afca3c50fb702a567afbe5f7690f528794ec6491c2b4e079fe4c9c",
+    "security_question": "你的生日？",
+    "security_answer": "060822",
+    "unlocked_pets": [
+      "像素小狗"
+    ],
+    "total_run_time": 95,
+    "pet_run_time": {
+      "像素小狗": 15
+    },
+    "used_transfer_keys": [
+      "TR-djF8eHV6aGloYW5nfDE5ODczNjE0NjgwfDgwfDE3NjYwMjc5MzE-AE8A5F6B13A5"
+    ]
+  }
+}

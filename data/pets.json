@@ -1,0 +1,131 @@
+{
+  "像素小狗": {
+    "price": 0,
+    "description": "初始桌宠，可爱的像素小狗",
+    "pixel_size": "32x32",
+    "frames": "assets/pets/pixel_dog.json"
+  },
+  "像素小猫": {
+    "price": 1800,
+    "description": "活泼的像素小猫，需要30分钟运行时间解锁",
+    "pixel_size": "32x32",
+    "frames": "assets/pets/pixel_cat.json"
+  },
+  "像素兔子": {
+    "price": 3600,
+    "description": "软萌的像素兔子，需要60分钟运行时间解锁",
+    "pixel_size": "32x32",
+    "frames": "assets/pets/pixel_rabbit.json"
+  },
+  "黄金像素龙": {
+    "price": 0,
+    "unlock_type": "key",
+    "description": "传说中的黄金像素龙，只能通过卡密解锁",
+    "pixel_size": "32x32",
+    "frames": "assets/pets/pixel_dragon.json"
+  },
+  "霓虹小狐狸": {
+    "price": 2400,
+    "description": "霓虹渐变与赛博光晕的俏皮狐狸",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_neon_fox.json"
+  },
+  "赛博小猫": {
+    "price": 2400,
+    "description": "高饱和赛博配色与猫耳闪光",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_cyber_cat.json"
+  },
+  "樱桃小兔": {
+    "price": 1800,
+    "description": "樱粉配色与圆润可爱造型",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_cherry_bunny.json"
+  },
+  "抹茶小熊": {
+    "price": 2000,
+    "description": "清新抹茶与软糯体型",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_matcha_bear.json"
+  },
+  "冰蓝企鹅": {
+    "price": 2200,
+    "description": "冰蓝渐变与圆滚造型",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_ice_penguin.json"
+  },
+  "彩虹独角兽": {
+    "price": 0,
+    "description": "白金身躯与彩虹角，限密钥解锁",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_rainbow_unicorn.json",
+    "unlock_type": "key"
+  },
+  "泡泡史莱姆": {
+    "price": 1500,
+    "description": "半透明果冻感与水光高光",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_bubble_slime.json"
+  },
+  "软萌水豚": {
+    "price": 2400,
+    "description": "治愈系软糯水豚",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_capybara.json"
+  },
+  "草莓奶牛": {
+    "price": 2100,
+    "description": "甜甜草莓斑点奶牛",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_strawberry_cow.json"
+  },
+  "幸运锦鲤": {
+    "price": 1800,
+    "description": "橘白锦鲤寓意好运",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_lucky_koi.json"
+  },
+  "元气小鸭": {
+    "price": 1600,
+    "description": "亮黄嘴橙的元气萌鸭",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_energetic_duck.json"
+  },
+  "星河小龙": {
+    "price": 0,
+    "description": "深蓝银河鳞片，限密钥解锁",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_star_dragon.json",
+    "unlock_type": "key"
+  },
+  "复古机器人": {
+    "price": 2000,
+    "description": "复古金属与绿灯显示屏",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_retro_robot.json"
+  },
+  "像素仙人掌": {
+    "price": 1400,
+    "description": "绿意盎然的桌面植物萌宠",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_pixel_cactus.json"
+  },
+  "奶茶波波": {
+    "price": 1700,
+    "description": "奶茶杯与黑糖珍珠的点点萌",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_boba_tea.json"
+  },
+  "清新小羊": {
+    "price": 1900,
+    "description": "白绵绵毛与温柔配色",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_fresh_lamb.json"
+  },
+  "Trae代码史莱姆": {
+    "price": 2500,
+    "description": "基于Trae IP设计的代码史莱姆，伴你写码",
+    "pixel_size": "32x32",
+    "frames": "assets\\pets\\pixel_trae_slime.json"
+  }
+}

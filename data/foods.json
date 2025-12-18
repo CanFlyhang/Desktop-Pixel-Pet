@@ -1,0 +1,17 @@
+{
+  "胡萝卜": {
+    "price": 120,
+    "description": "基础粮食：脆甜胡萝卜",
+    "frames": "assets/pets/pixel_food_carrot.json"
+  },
+  "牛奶": {
+    "price": 240,
+    "description": "营养牛奶：顺滑香浓",
+    "frames": "assets/pets/pixel_food_milk.json"
+  },
+  "鱼干": {
+    "price": 180,
+    "description": "猫咪最爱：咸香鱼干",
+    "frames": "assets/pets/pixel_food_fish.json"
+  }
+}
