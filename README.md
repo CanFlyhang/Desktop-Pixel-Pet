@@ -1,3 +1,62 @@
+# 🐾 Desktop Pixel Pet（桌面像素宠物）
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
+Desktop Pixel Pet（桌面像素宠物）是一个 **轻量、可扩展、以像素动画驱动的桌面陪伴应用**。  
+它会在你的电脑桌面角落展示一只（或多只）可爱的像素宠物，让它待机、走动、互动，陪你一起工作与学习 ✨
+
+---
+
+## 📸 项目预览
+
+> 以下为项目运行示意图（占位）
+
+<!-- TODO: 添加项目截图 -->
+<!--
+![宠物待机](docs/images/idle.png)
+![宠物行走](docs/images/walk.gif)
+![宠物商城](docs/images/shop.png)
+-->
+
+---
+
+## ✨ 项目特性
+
+- 🐶 **桌面像素宠物**
+  - 宠物常驻桌面，不干扰正常操作
+  - 支持待机、行走、互动等动画状态
+
+- 🛒 **宠物商城与解锁机制**
+  - 以 **运行时间作为货币**
+  - 可购买 / 解锁新的宠物与粮食
+
+- 💾 **本地数据存储 & 迁移**
+  - 支持数据导入 / 导出
+  - 方便在不同设备间迁移账号与进度
+
+- 🎨 **像素资源驱动**
+  - 宠物基于像素帧数据（Frame-based）
+  - 易于社区创作新角色、新动画
+
+- 🧩 **清晰可扩展的架构**
+  - 适合作为：
+    - 桌面小工具示例
+    - GUI 项目实践
+    - 像素动画资源管理项目
+
+---
+
+## 🧱 技术栈
+
+- 🐍 **Python**
+- 🖼️ GUI：Tkinter / PyQt / 其他（按实际填写）
+- 📦 数据存储：本地文件（JSON / SQLite 等）
+- 🎞️ 像素动画：帧数据驱动
+
+---
 # Desktop-Pixel-Pet
 Desktop Pixel Pet（桌面像素宠物）是一个轻量、可扩展的桌面陪伴应用：在你的电脑桌面上展示可爱的像素宠物，让它在屏幕角落里待机、走动、互动，陪你工作与学习。项目内置宠物商城与解锁机制，支持使用运行时间作为货币购买/激活宠物与粮食，并提供本地数据导入/导出能力，方便在不同设备间迁移账号与进度。整体架构清晰，宠物资源以像素帧数据驱动，便于社区创作与扩展更多角色与动画，适合作为桌面小工具、像素动画资源管理与 GUI 项目实践的开源范例。
 
