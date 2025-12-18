@@ -110,6 +110,24 @@ data/
 main.py
 README.md
 ```
+## 👥 项目贡献者
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/yourname">
+        <img src="https://avatars.githubusercontent.com/yourname" width="80" /><br />
+        <sub><b>yourname</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/contributor1">
+        <img src="https://avatars.githubusercontent.com/contributor1" width="80" /><br />
+        <sub><b>contributor1</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## 常见问题
 - 无法创建悬浮透明窗：确保已安装 `pywin32`；若缺失将自动降级为 Tkinter 顶层窗体。
