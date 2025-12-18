@@ -12,7 +12,7 @@ Desktop Pixel Pet（桌面像素宠物）是一个 **轻量、可扩展、以像
 
 ## 📸 项目预览
 
-<img width="802" height="645" alt="image" src="https://github.com/user-attachments/assets/4ae36b74-598c-4066-9204-869db0b82dff" /><img width="677" height="498" alt="image" src="https://github.com/user-attachments/assets/358db5b0-29bf-4bdf-b53c-0fa7eae5e337" />
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/4ae36b74-598c-4066-9204-869db0b82dff" /><img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/358db5b0-29bf-4bdf-b53c-0fa7eae5e337" />
 
 
 
