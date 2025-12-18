@@ -1,0 +1,31 @@
+{
+  "size": [16, 16],
+  "palette": {
+    "bg": [0, 0, 0, 0],
+    "s": [169, 169, 169, 255],
+    "d": [105, 105, 105, 255],
+    "eye": [0, 0, 0, 255]
+  },
+  "frames": [
+    {
+      "pixels": [
+        ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","bg","bg","bg","s","s","s","bg","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","bg","bg","s","s","s","s","bg","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","bg","s","s","s","s","s","bg","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","s","s","d","s","d","s","s","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","s","s","s","s","s","s","s","s","bg","bg","bg","bg","bg"],
+        ["bg","bg","s","s","s","s","s","eye","s","s","s","s","bg","bg","bg","bg"],
+        ["bg","bg","s","s","s","s","s","s","s","s","s","s","bg","bg","bg","bg"],
+        ["bg","bg","bg","s","s","s","s","s","s","s","s","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","s","s","s","s","s","s","bg","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","bg","s","s","s","s","bg","bg","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","bg","bg","s","s","bg","bg","bg","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"],
+        ["bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg","bg"]
+      ]
+    }
+  ]
+}
