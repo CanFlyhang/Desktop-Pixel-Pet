@@ -21,7 +21,7 @@ class AppController:
 
     def __init__(self) -> None:
         self.root = tk.Tk()
-        self.root.title("Trae 像素桌宠")
+        self.root.title("Desktop Pixel Pet By CanFlyhang")
         self.root.geometry("800x600")
         self.root.configure(bg="#222")
         # 核心服务
