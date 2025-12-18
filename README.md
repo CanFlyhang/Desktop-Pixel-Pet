@@ -116,15 +116,11 @@ README.md
   <tr>
     <td align="center">
       <a href="https://github.com/yourname">
-        <img src="https://avatars.githubusercontent.com/yourname" width="80" /><br />
+        <img src="[https://avatars.githubusercontent.com/yourname](https://github.com/CanFlyhang/)" width="80" /><br />
         <sub><b>yourname</b></sub>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/contributor1">
-        <img src="https://avatars.githubusercontent.com/contributor1" width="80" /><br />
-        <sub><b>contributor1</b></sub>
-      </a>
     </td>
   </tr>
 </table>
