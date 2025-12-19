@@ -492,7 +492,9 @@ class FloatWindow:
             win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, ex_style)
             # 使用近全透明的关键色（与 bg 一致），实现不规则窗口
             # 颜色格式：RGB，Alpha 忽略；此处选择青色 0x00FEFE
-            win32gui.SetLayeredWindowAttributes(hwnd, 0x00FEFE, 255, win32con.LWA_COLORKEY)
+            # SetLayeredWindowAttributes 需要 COLORREF (0x00BBGGRR)
+            # 对应 #00FEFE (R=0, G=254, B=254) -> 0xFEFE00
+            win32gui.SetLayeredWindowAttributes(hwnd, 0xFEFE00, 255, win32con.LWA_COLORKEY)
         except Exception:
             # 失败则保持 Tkinter 属性，不影响功能
             pass
