@@ -55,12 +55,38 @@ class PetAnimator:
         self._state = random.choice(["wag", "jump", "blink"])
         self._interact_ticks = random.randint(5, 12)
 
-    def get_tk_image(self) -> "ImageTk.PhotoImage":
-        """将当前 Pygame Surface 转为 Tkinter 可用的 PhotoImage"""
+    def get_tk_image(self, outline_color: Tuple[int, int, int] = None) -> "ImageTk.PhotoImage":
+        """将当前 Pygame Surface 转为 Tkinter 可用的 PhotoImage
+        
+        Args:
+            outline_color: 可选 (R, G, B)，若提供则绘制像素轮廓
+        """
         if not self.frames:
             img = Image.new("RGBA", (self.w, self.h), (0, 0, 0, 0))
             return ImageTk.PhotoImage(img)
         surf = self.frames[self._idx]
+
+        # 如果需要绘制轮廓
+        if outline_color:
+            # 创建 mask 并生成纯色图
+            mask = pygame.mask.from_surface(surf)
+            # 注意：setcolor 需要 (R, G, B, A)
+            solid_surf = mask.to_surface(setcolor=(*outline_color, 255), unsetcolor=(0, 0, 0, 0))
+            
+            # 创建合成用的临时 Surface
+            w, h = surf.get_size()
+            temp_surf = pygame.Surface((w, h), pygame.SRCALPHA)
+            
+            # 上下左右偏移绘制纯色底（模拟膨胀效果）
+            temp_surf.blit(solid_surf, (-1, 0))
+            temp_surf.blit(solid_surf, (1, 0))
+            temp_surf.blit(solid_surf, (0, -1))
+            temp_surf.blit(solid_surf, (0, 1))
+            
+            # 叠加原图
+            temp_surf.blit(surf, (0, 0))
+            surf = temp_surf
+
         raw_str = pygame.image.tostring(surf, "RGBA", False)
         img = Image.frombytes("RGBA", (self.raw_w, self.raw_h), raw_str)
         
