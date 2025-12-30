@@ -1,0 +1,5 @@
+pygame
+Pillow
+pywin32
+mediapipe
+opencv-python
