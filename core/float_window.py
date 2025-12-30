@@ -1,7 +1,9 @@
 import sys
+import time
 import random
 import tkinter as tk
 from typing import Callable, Optional
+import pygame  # Added pygame import
 
 try:
     import win32con
@@ -13,6 +15,7 @@ except Exception:
 from .pet import PetAnimator
 from .runtime_tracker import RuntimeTracker
 from .data_manager import DataManager  # Added import
+from .fatigue_detector import FatigueDetector
 
 
 class PixelContextMenu:
@@ -214,6 +217,23 @@ class FloatWindow:
         self.on_back_home = on_back_home
         self.on_change_pet = on_change_pet
         self.on_switched_pet = on_switched_pet
+
+        # 疲劳监测
+        self.fatigue_detector = FatigueDetector()
+        self.fatigue_detector.start()
+
+        # 音频播放初始化
+        self.audio_enabled = True
+        self.is_playing_alert = False
+        self.audio_path = r"c:\Users\lion\Desktop\Desktop-Pixel-Pet-main\manbo.mp3"
+        self.no_face_audio_path = r"c:\Users\lion\Desktop\Desktop-Pixel-Pet-main\where.mp3"
+        self.is_playing_no_face_alert = False
+        self.current_audio_state = None
+        try:
+            pygame.mixer.init()
+        except Exception as e:
+            print(f"音频初始化失败: {e}")
+            self.audio_enabled = False
 
         # 问候模式状态
         self.warm_greetings_enabled = False
@@ -571,7 +591,73 @@ class FloatWindow:
     def _tick(self) -> None:
         """定时刷新动画与画布显示"""
         self.animator.next_frame()
-        self._photo = self.animator.get_tk_image()
+        
+        # 获取疲劳状态并决定轮廓颜色
+        status = self.fatigue_detector.get_status()
+        outline_color = None
+        
+        # 音频控制逻辑
+        if self.audio_enabled:
+            if status == FatigueDetector.STATUS_FATIGUE:
+                if self.current_audio_state != "fatigue" and not self.is_playing_alert:
+                    if self.is_playing_no_face_alert:
+                        try:
+                            if pygame.mixer.get_init():
+                                pygame.mixer.music.stop()
+                        except Exception:
+                            pass
+                        self.is_playing_no_face_alert = False
+                    try:
+                        if pygame.mixer.get_init():
+                            pygame.mixer.music.load(self.audio_path)
+                            pygame.mixer.music.play(-1)
+                            self.is_playing_alert = True
+                            self.current_audio_state = "fatigue"
+                    except Exception as e:
+                        print(f"播放音频失败: {e}")
+                        self.audio_enabled = False
+            elif status == FatigueDetector.STATUS_NO_FACE:
+                if self.current_audio_state != "no_face" and not self.is_playing_no_face_alert:
+                    if self.is_playing_alert:
+                        try:
+                            if pygame.mixer.get_init():
+                                pygame.mixer.music.stop()
+                        except Exception:
+                            pass
+                        self.is_playing_alert = False
+                    try:
+                        if pygame.mixer.get_init():
+                            pygame.mixer.music.load(self.no_face_audio_path)
+                            pygame.mixer.music.play(-1)
+                            self.is_playing_no_face_alert = True
+                            self.current_audio_state = "no_face"
+                    except Exception as e:
+                        print(f"播放音频失败: {e}")
+                        self.audio_enabled = False
+            else:
+                if self.is_playing_alert or self.is_playing_no_face_alert:
+                    try:
+                        if pygame.mixer.get_init():
+                            pygame.mixer.music.stop()
+                    except Exception:
+                        pass
+                    self.is_playing_alert = False
+                    self.is_playing_no_face_alert = False
+                    self.current_audio_state = None
+
+        if status == FatigueDetector.STATUS_FATIGUE:
+            # 红色闪烁：每 0.5 秒切换一次
+            if int(time.time() * 2) % 2 == 0:
+                outline_color = (255, 0, 0)
+            # else: None (不显示轮廓，实现闪烁)
+        elif status == FatigueDetector.STATUS_NORMAL:
+            # 绿色常亮
+            outline_color = (0, 255, 0)
+        elif status == FatigueDetector.STATUS_NO_FACE:
+            if int(time.time() * 2) % 2 == 0:
+                outline_color = (255, 255, 0)
+
+        self._photo = self.animator.get_tk_image(outline_color=outline_color)
         self.canvas.configure(width=self.animator.w, height=self.animator.h)
         self.canvas.create_image(0, 0, image=self._photo, anchor="nw")
         self.top.after(120, self._tick)
@@ -580,6 +666,17 @@ class FloatWindow:
         """关闭悬浮窗并停止计时"""
         self._cancel_greeting()
         self.tracker.stop()
+        if hasattr(self, 'fatigue_detector'):
+            self.fatigue_detector.stop()
+        
+        # 停止音频
+        try:
+            if pygame.mixer.get_init():
+                pygame.mixer.music.stop()
+                pygame.mixer.quit()
+        except Exception:
+            pass
+
         try:
             self.top.destroy()
         except Exception:
